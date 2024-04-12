@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container > * {
+  min-width: 25rem;
+  max-width: 30rem;
+}
+
+.image {
+  border-radius: 3rem;
+  flex: 1 0;
+  object-fit: cover;
+  height: 30rem;
+  margin: 1rem;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  border-radius: 3rem;
+  padding: 2rem;
+  color: black;
+  margin-left: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.favorite {
+  color: #e72929;
+  font-size: 2.5rem;
+}
+
+.favorite.not {
+  color: grey;
+}
+
+.origins {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.7rem 0;
+}
+
+.origins > span {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem 0 0;
+  border-radius: 2rem;
+  background-color: aliceblue;
+}
+
+.cook_time {
+  margin-top: 1rem;
+}
+
+.cook_time span {
+  padding: 0.6rem 2rem 0.6rem 0;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  margin: 2rem 2rem 2rem 0;
+  color: green;
+}
+
+.price::before {
+  content: 'Price: ';
+  color: rgb(22, 18, 18);
+}
+
+.container button {
+  color: white;
+  background-color: #ee7f39;
+  border: none;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 10rem;
+  outline: none;
+}
+
+.container button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.container button.buynow {
+  margin-top: 1rem; /* Add margin between the buttons */
+}
+
+.gstText {
+  font-size: 1rem; /* Adjust the font size as needed */
+  color: black; /* Set the color to black */
+}
+
+.relatedFoodsHeader {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10rem;
+  /* Add any other styles you want */
+}
+
+
+.container .sizes button {
+  color: black; /* Text color */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #ee7f39; /* Outer border color */
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container .sizes button:hover {
+  background-color: #e39a34; /* Background color on hover */
+  color: white; /* Text color on hover */
+}
+
+.container .sizes button.selected {
+  background-color: #e39a34; /* Background color when selected */
+  color: rgb(11, 4, 4); /* Text color when selected */
+}

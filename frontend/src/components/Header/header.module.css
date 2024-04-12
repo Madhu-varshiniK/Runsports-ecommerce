@@ -1,0 +1,131 @@
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+  font-size: 1.2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Increased padding for better spacing */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #b91d32;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+}
+
+li {
+  margin-left: 0rem; /* Increased margin for better spacing */
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #070707;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  position: relative; /* Make the <a> tag a positioned element */
+}
+
+a::after { /* Create a pseudo-element to act as the underline */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px; /* Set the height of the underline */
+  background-color: black; /* Set the color of the underline */
+  transform: scaleX(0); /* Initially scale the underline to 0 width */
+  transition: transform 0.3s ease; /* Add transition for smoother animation */
+}
+
+a:hover::after { /* Scale the underline on hover */
+  transform: scaleX(1); /* Scale the underline to full width */
+}
+
+@media screen and (max-width: 768px) {
+  /* Add your responsive styles here */
+}
+
+
+.menu_container {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 10px); /* Adjusted top position */
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 1rem;
+  display: none;
+  border-radius: 5px; /* Added border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+}
+
+.menu_container:hover .menu,
+.menu_container:focus-within .menu { /* Show menu on hover and focus within */
+  display: block;
+}
+
+.cart_count {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .logo {
+    margin-bottom: 1rem; /* Add space between logo and menu */
+  }
+
+  ul {
+    margin-top: 1rem;
+  }
+
+  .menu_container {
+    position: static;
+    margin-top: 1rem; /* Add space between menu items */
+  }
+
+  .menu {
+    position: static;
+    display: block;
+    margin-top: 1rem;
+    width: 100%; /* Full width menu */
+  }
+
+  li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+}

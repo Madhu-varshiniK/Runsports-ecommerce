@@ -1,0 +1,87 @@
+/* footer.module.css */
+
+.footer-distributed {
+    background-color: #dda954;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 80px;
+  }
+  
+  .footer-left, .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .footer-left {
+    width: 60%;
+  }
+  
+  .footer-left p {
+    color: black;
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+  }
+  
+  .footer-links a:hover {
+    opacity: 1;
+  }
+  
+  .link-1 {
+    font-weight: bold;
+  }
+  
+  .footer-right {
+    width: 40%;
+    text-align: right;
+  }
+  
+  .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    color: black;
+    border-radius: 2px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-right a:hover {
+    background-color: #e9ecef;
+    color: #e2eef6;
+  }
+  
+  .footer-right a i {
+    padding-top: 7px;
+  }
+  
+  .footer-left p:last-child {
+    color:black;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+  
+  .footer-left p:last-child a {
+    color: #8f9296;
+    text-decoration: none;
+  }
+  
+  .footer-left p:last-child a:hover {
+    text-decoration: underline;
+  }
+  

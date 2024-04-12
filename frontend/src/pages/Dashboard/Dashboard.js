@@ -1,0 +1,68 @@
+import React from 'react';
+import { useAuth } from '../../hooks/useAuth';
+import classes from './dashboard.module.css';
+import { Link } from 'react-router-dom';
+
+export default function Dashboard() {
+  const { user } = useAuth();
+
+  return (
+    <div className={classes.wrapper}>
+      <div className={classes.welcome}>
+        {user && <p>Welcome, {user.name}</p>}
+      </div>
+    <div className={classes.container}>
+      <div className={classes.menu}>
+        {allItems
+          .filter(item => user.isAdmin || !item.forAdmin)
+          .map(item => (
+            <Link
+              key={item.title}
+              to={item.url}
+              style={{
+                backgroundColor: item.bgColor,
+                color: item.color,
+              }}
+            >
+              <img src={item.imageUrl} alt={item.title} />
+              <h2>{item.title}</h2>
+            </Link>
+          ))}
+      </div>
+    </div>
+    </div>
+  );
+}
+
+const allItems = [
+  {
+    title: 'Orders',
+    imageUrl: '/icons/orders.svg',
+    url: '/orders',
+    bgColor: '#ec407a',
+    color: 'white',
+  },
+  {
+    title: 'Profile',
+    imageUrl: '/icons/profile.svg',
+    url: '/profile',
+    bgColor: '#1565c0',
+    color: 'white',
+  },
+  {
+    title: 'Users',
+    imageUrl: '/icons/users.svg',
+    url: '/admin/users',
+    forAdmin: true,
+    bgColor: '#42d1f5',
+    color: 'white',
+  },
+  {
+    title: 'Products',
+    imageUrl: 'https://icon-library.com/images/products-icon/products-icon-15.jpg',
+    url: '/admin/foods',
+    forAdmin: true,
+    bgColor: '#e040fb',
+    color: 'white',
+  },
+];

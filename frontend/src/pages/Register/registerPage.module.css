@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* margin-top: 3rem; */
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220216/pngtree-color-geometry-national-marathon-sports-background-image_937391.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.details {
+  width: 25rem;
+}
+
+.details form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+}
