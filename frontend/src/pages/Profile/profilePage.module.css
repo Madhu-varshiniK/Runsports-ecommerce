@@ -1,11 +1,29 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin-top: 3rem;
+  justify-content: center; /* Center the containers horizontally */
+  align-items: flex-start; /* Align items to the start (top) */
+  flex-wrap: wrap; /* Allow containers to wrap on smaller screens */
 }
 
-.details {
-  width: 28rem;
+.dashboardContainer {
+  width: calc(20% - 10px); /* Adjusted width with gap */
+  margin-right: 10px; /* Add margin to create space between dashboard and profile */
+}
+
+.profileContainer {
+  width: calc(70% - 10px); /* Adjusted width with gap */
+  margin-top: 20px; /* Add margin to create space between dashboard and profile */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Change to column layout on smaller screens */
+    align-items: center; /* Center items horizontally on smaller screens */
+  }
+
+  .dashboardContainer,
+  .profileContainer {
+    width: 100%; /* Full width on smaller screens */
+    margin: 10px 0; /* Add margin to all containers */
+  }
 }

@@ -1,8 +1,14 @@
+
 .container {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
   margin-bottom: 10rem;
+}
+
+.dashboardContainer {
+  width: calc(20% - 5px); /* Adjusted width with gap */
+  margin-right: 10px; /* Add margin to create space between dashboard and list */
 }
 
 .list {
@@ -12,7 +18,7 @@
 
 a.add_food {
   display: inline-block;
-  background: rgb(27, 31, 134);
+  background: rgb(229, 126, 42);
   color: white;
   padding: 0.7rem;
   margin: 0.8rem 0;
@@ -30,21 +36,46 @@ a.add_food:hover {
     minmax(10rem, 20rem)
     minmax(5rem, 10rem)
     minmax(5rem, 10rem);
+  gap: 1rem; /* Add gap between grid items */
   font-size: 1.2rem;
-  height: 5rem;
   align-items: center;
   justify-content: center;
+  border: 1px solid #ccc; /* Add border */
+  padding: 1rem; /* Add padding for space inside the box */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Add custom cubic-bezier transition effect */
+
+}
+
+.list_item.clicked {
+  transform: translateY(-5px); /* Move item upwards */
+  transform: scale(1.05); /* Scale up the item slightly on click */
+}
+
+.list_item:hover {
+  border-color: #999; /* Change border color on hover */
 }
 
 .list_item img {
   width: 4rem;
   height: 4rem;
-  border-radius: 100rem;
+  border-radius: 50%; /* Adjust border-radius for circular images */
   object-fit: cover;
 }
 
 .actions > a {
   margin-right: 1rem;
-  color: darkblue;
+  color: rgb(177, 81, 8);
   cursor: pointer;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .list_item {
+    grid-template-columns: 1fr; /* Change to single column layout on smaller screens */
+  }
+
+  .dashboardContainer {
+    display: none; /* Hide dashboard on smaller screens */
+  }
 }

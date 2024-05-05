@@ -51,8 +51,7 @@ export default function CheckoutPage() {
               defaultValue={user.address}
               label="Address"
               {...register('address')}
-              error={errors.address}
-            />
+              error={errors.address}/>
             <Input
               label="Mobile Number"
               {...register('mobile', { required: true })}

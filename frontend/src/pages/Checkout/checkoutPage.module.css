@@ -1,4 +1,4 @@
-.container {
+/* .container {
   margin-top: 1rem;
   display: flex;
   margin: 0 0 6rem 2rem;
@@ -29,4 +29,54 @@
 .buttons {
   margin: 2rem;
   width: 35rem;
+} */
+
+
+.container {
+  margin-top: 1rem;
+  display: flex;
+  margin: 0 0 6rem 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content {
+  width: 35rem;
+  margin: 0 3rem 0 0;
+}
+
+.content,
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  width: 100%;
+}
+
+.buttons_container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  margin: 2rem;
+  width: 35rem;
+}
+
+/* Additional button styles */
+.button {
+  font-weight: bold; /* Make text bold */
+  color: white; /* Button text color */
+  background-color: #4542f5; /* Button background color */
+  padding: 0.7rem; /* Adjust padding */
+  border: none; /* Remove border */
+  border-radius: 0.5rem; /* Add border radius */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.button:hover {
+  opacity: 0.9; /* Reduce opacity on hover */
 }

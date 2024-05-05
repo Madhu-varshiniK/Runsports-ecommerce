@@ -8,6 +8,7 @@
 
 .table td {
   height: 3rem;
+  color: black;
 }
 .table td img {
   width: 3rem;
@@ -19,7 +20,7 @@
 .table h3 {
   margin-top: 0.5rem;
   margin-left: 0.3rem;
-  color: grey;
+  color: rgb(209, 85, 9);
 }
 .table a:hover {
   opacity: 0.9;

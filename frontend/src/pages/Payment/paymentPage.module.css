@@ -6,6 +6,7 @@
 }
 
 .content {
+  font-weight: bold;
   width: 35rem;
   margin: 0 3rem 0 0;
   display: flex;
@@ -23,6 +24,8 @@
 .summary h3 {
   margin: 0 1rem 0 0;
   flex-basis: 5rem;
+  font-weight: bold;
+  color: rgb(222, 63, 11);
 }
 
 .buttons_container {

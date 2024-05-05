@@ -6,6 +6,7 @@ import Title from '../../components/Title/Title';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import ChangePassword from '../../components/ChangePassword/ChangePassword';
+import Dashboard from '../Dashboard/Dashboard';
 
 export default function ProfilePage() {
   const {
@@ -22,8 +23,11 @@ export default function ProfilePage() {
 
   return (
     <div className={classes.container}>
-      <div className={classes.details}>
-        <Title title="Update Profile" />
+      <div className={classes.dashboardContainer}>
+        <Dashboard />
+      </div>
+      <div className={classes.profileContainer}>
+        <Title title="Make Updates" />
         <form onSubmit={handleSubmit(submit)}>
           <Input
             defaultValue={user.name}
@@ -46,7 +50,7 @@ export default function ProfilePage() {
             error={errors.address}
           />
 
-          <Button type="submit" text="Update" backgroundColor="#009e84" />
+          <Button type="submit" text="Update" backgroundColor="#e87c09" />
         </form>
 
         <ChangePassword />

@@ -33,6 +33,12 @@ export default function LoginPage() {
     <div className={classes.container}>
       <div className={classes.details}>
         <Title title="Login" />
+        <div className={classes.register}>
+            New user? &nbsp;
+            <Link to={`/register${returnUrl ? '?returnUrl=' + returnUrl : ''}`} style={{color:"#2a1e92",fontWeight:"bold"}}>
+              Register here
+            </Link>
+          </div>
         <form onSubmit={handleSubmit(submit)} noValidate>
           <Input
             type="email"
@@ -54,13 +60,6 @@ export default function LoginPage() {
           />
 
           <Button type="submit" text="Login" style="background-color:#5442f5" />
-
-          <div className={classes.register}>
-            New user? &nbsp;
-            <Link to={`/register${returnUrl ? '?returnUrl=' + returnUrl : ''}`} style={{color:"#2a1e92",fontWeight:"bold"}}>
-              Register here
-            </Link>
-          </div>
         </form>
       </div>
     </div>

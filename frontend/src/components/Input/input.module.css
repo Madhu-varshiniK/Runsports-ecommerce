@@ -6,11 +6,12 @@
   transition: border-width 0.15s ease-out;
   font-size: 1.1rem;
   outline: none;
+  font-weight: bold;
 }
 
 .input::placeholder {
-  color: #2a1e92;
-  font-size: 0.93rem;
+  color: #e79d8a;
+  font-size: 0.7rem;
 }
 
 .input:focus {

@@ -5,29 +5,54 @@
   font-size: 1.2rem;
 }
 
-.list {
-  width: 100%;
-  max-width: 50rem;
+.dashboardContainer {
+  width: calc(20% - 10px); /* Adjusted width with gap */
+  margin-right: 10px; /* Add margin to create space between dashboard and user list */
 }
 
+.usersContainer {
+  width: calc(80% - 10px); /* Adjusted width with gap */
+}
+
+.list {
+  width: 80%; /* Set width to 100% */
+}
 .list_item {
-  display: grid;
-  grid-template-columns: 20% 35% 20% 10% 15%;
-  gap: 1%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid whitesmoke;
-  min-height: 3rem;
+  border: 1px solid rgb(2, 2, 2);
+  padding-right: 4rem;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 .list_item > * {
+  flex: 1;
   word-wrap: break-word;
 }
 
-h3 {
-  margin-left: 0;
+.list_item span {
+  width: calc(20% - 20px); /* Adjust the width for each column */
+}
+
+.list_item h3 {
+  width: calc(16% - 20px); /* Adjust the width for each column */
 }
 
 .actions {
-  display: flex;
-  gap: 0.7rem;
+  width: calc(15% - 20px); /* Adjust the width for the actions column */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Change to column layout on smaller screens */
+    align-items: center; /* Center items horizontally on smaller screens */
+  }
+
+  .dashboardContainer,
+  .usersContainer {
+    width: 100%; /* Full width on smaller screens */
+    margin: 10px 0; /* Add margin to all containers */
+  }
 }

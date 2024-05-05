@@ -7,6 +7,7 @@ import Title from '../../components/Title/Title';
 import Search from '../../components/Search/Search';
 import Price from '../../components/Price/Price';
 import { toast } from 'react-toastify';
+import Dashboard from '../Dashboard/Dashboard';
 
 export default function FoodsAdminPage() {
   const [foods, setFoods] = useState();
@@ -42,14 +43,11 @@ export default function FoodsAdminPage() {
 
   return (
     <div className={classes.container}>
+      <div className={classes.dashboardContainer}>
+      <Dashboard/>
+      </div>
       <div className={classes.list}>
         <Title title="Manage Products" margin="1rem auto" />
-        <Search
-          searchRoute="/admin/foods/"
-          defaultRoute="/admin/foods"
-          margin="1rem 0"
-          placeholder="Search Goods"
-        />
         <Link to="/admin/addFood" className={classes.add_food}>
           Add Product +
         </Link>
